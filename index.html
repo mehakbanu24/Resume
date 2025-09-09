@@ -1,27 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Biodata of Mehak Banu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* General Page Styles */
+        /* General Layout */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f8ff;
-            color: #333;
-            padding: 20px;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f9f9ff;
             margin: 0;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: #996eba;
+            color: white;
+            width: 25%;
+            min-height: 100vh;
+            padding: 30px;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        }
+
+        .sidebar h2 {
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+        }
+
+        .sidebar a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .sidebar a i {
+            margin-right: 10px;
+        }
+
+        /* Main Content */
+        .main {
+            flex: 1;
+            padding: 40px;
         }
 
         h1 {
-            color: #ff4500;
             text-align: center;
+            color: #ff4500;
+            font-size: 36px;
+            margin-bottom: 30px;
         }
 
         h2 {
             color: #996eba;
-            border-bottom: 2px solid #996eba;
-            padding-bottom: 5px;
-            margin-top: 20px;
+            border-left: 5px solid #996eba;
+            padding-left: 10px;
+            margin-top: 30px;
+            font-size: 24px;
         }
 
         p, li {
@@ -29,138 +68,148 @@
             line-height: 1.6;
         }
 
-        strong {
-            color: #996eba;
+        /* Timeline Design */
+        .timeline {
+            position: relative;
+            margin-left: 20px;
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #996eba;
         }
 
-        th, td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+        .timeline-item {
+            position: relative;
+            margin-bottom: 20px;
+            padding-left: 30px;
         }
 
-        th {
-            background-color: #996eba;
-            color: white;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            background: #996eba;
+            border-radius: 50%;
         }
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            margin-bottom: 15px;
         }
 
-        .contact-info {
-            background-color: #b492c3;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
         }
     </style>
 </head>
 <body>
 
-    <h1>Biodata</h1>
-
-    <!-- Personal Information -->
-    <h2>Personal Information</h2>
-    <p><strong>Name:</strong> Mehak Banu</p>
-    <p><strong>Date of Birth:</strong> January 3, 2004</p>
-    <p><strong>Gender:</strong> Female</p>
-    <p><strong>Nationality:</strong> Indian</p>
-
-    <!-- Career Objective -->
-    <h2>Career Objective</h2>
-    <p>Motivated Software Developer with strong skills in Java, MySQL, Linux, and Shell Scripting. Experienced in building and deploying applications using Docker, CI/CD pipelines, and AWS. Skilled in manual and automation testing with Selenium. Passionate about designing scalable systems, automating workflows, and delivering high-performance, thoroughly tested software solutions.</p>
-
-    <!-- Education -->
-    <h2>Educational Qualification</h2>
-    <table>
-        <tr>
-            <th>Degree</th>
-            <th>Institution</th>
-            <th>Year of Passing</th>
-            <th>Percentage/CGPA</th>
-        </tr>
-        <tr>
-            <td>B.E (ISE)</td>
-            <td>K.N.S Institute of Technology</td>
-            <td>2025</td>
-            <td>9.1 CGPA</td>
-        </tr>
-        <tr>
-            <td>PUC (PCMC)</td>
-            <td>Goodwill PU College</td>
-            <td>2021</td>
-            <td>99%</td>
-        </tr>
-        <tr>
-            <td>SSLC</td>
-            <td>St. Flowers High School</td>
-            <td>2019</td>
-            <td>94%</td>
-        </tr>
-    </table>
-
-    <!-- Skills -->
-    <h2>Technical Skills</h2>
-    <ul>
-        <li><strong>Operating Systems & Scripting:</strong> Linux (Server Setup, Deployment), Shell Scripting (Automation)</li>
-        <li><strong>Core Java:</strong> OOP Concepts, Access Modifiers, Constructors</li>
-        <li><strong>Cloud:</strong> AWS (EC2, S3, IAM), IBM Cloud, CI/CD pipelines</li>
-        <li><strong>Database:</strong> MySQL (DDL, DML, DQL, Self Joins)</li>
-        <li><strong>Testing:</strong> Manual & Automation (Selenium), SDLC, STLC</li>
-    </ul>
-
-    <!-- Work Experience -->
-    <h2>Work Experience</h2>
-    <ol>
-        <li><strong>Intern - Teamware Solution (July 2025 – Sept 2025):</strong> Worked on Linux automation using shell scripting, designed MySQL databases, deployed apps with Docker and AWS EC2.</li>
-        <li><strong>Beta Tester - Rooman Technologies (Jan 2025 – Mar 2025):</strong> Tested LMS modules, reported bugs, and verified UI functionality.</li>
-        <li><strong>Web Development Intern - KodNest (Sep 2024 – Nov 2024):</strong> Built static website using HTML, CSS, JS.</li>
-        <li><strong>Beta Tester - ProInterns (Apr 2022 – Sep 2022):</strong> Validated website features, reported bugs, and provided UI/UX feedback.</li>
-    </ol>
-
-    <!-- Projects -->
-    <h2>Projects</h2>
-    <ul>
-        <li><strong>AutoDeploy (CI/CD):</strong> Automated deployment of a resume website on AWS EC2 using GitHub Actions and Apache2.</li>
-        <li><strong>Dockerized Login Application:</strong> Developed a responsive login app (HTML, CSS, JS) and deployed with Docker.</li>
-        <li><strong>Airlines Ticket Booking Platform:</strong> CRUD-based web system for ticket booking with admin features.</li>
-        <li><strong>Job Search Automation (Selenium + Java):</strong> Automated Naukri login and job search process.</li>
-        <li><strong>Portfolio Website:</strong> Designed and developed a personal portfolio site using HTML and CSS.</li>
-    </ul>
-
-    <!-- Certifications -->
-    <h2>Certifications</h2>
-    <ul>
-        <li>Cloud Application Developer – NSDC Rooman</li>
-        <li>Introduction to Cloud – IBM</li>
-        <li>Software Testing – QSpiders (Java, SQL, Manual Testing, Selenium)</li>
-    </ul>
-
-    <!-- Achievements -->
-    <h2>Achievements</h2>
-    <ul>
-        <li>2nd Prize - Paper Presentation (Cognitech-23)</li>
-        <li>1st Prize - Debugging Competition (Tech Takshak 2024)</li>
-        <li>Hackathon Coordinator - Tech Takshak 2024</li>
-        <li>Volunteered in Cancer Awareness Campaign (Suriya Foundation)</li>
-    </ul>
-
-    <!-- Contact -->
-    <h2>Contact Information</h2>
-    <div class="contact-info">
-        <p><strong>Email:</strong> mehakbanu024@gmail.com</p>
-        <p><strong>Phone:</strong> +91 9036282310</p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/mehak-banu" style="color:white;">linkedin.com/in/mehak-banu</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/mehakbanu24" style="color:white;">github.com/mehakbanu24</a></p>
-        <p><strong>Portfolio:</strong> <a href="https://mehakbanu24.github.io/My_Portfolio/" style="color:white;">mehakbanu24.github.io/My_Portfolio</a></p>
+    <!-- Sidebar with Contact Info -->
+    <div class="sidebar">
+        <h2>Contact</h2>
+        <p><strong>Email:</strong><br> mehakbanu024@gmail.com</p>
+        <p><strong>Phone:</strong><br> +91 9036282310</p>
+        <h2>Links</h2>
+        <a href="https://www.linkedin.com/in/mehak-banu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/mehakbanu24" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://mehakbanu24.github.io/My_Portfolio/" target="_blank"><i class="fas fa-globe"></i> Portfolio</a>
     </div>
 
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Mehak Banu</h1>
+
+        <!-- Career Objective -->
+        <h2>Career Objective</h2>
+        <div class="card">
+            <p>Motivated Software Developer with strong skills in Java, MySQL, Linux, and Shell Scripting. Experienced in building and deploying applications using Docker, CI/CD pipelines, and AWS. Skilled in manual and automation testing with Selenium. Passionate about designing scalable systems, automating workflows, and delivering high-performance, thoroughly tested software solutions.</p>
+        </div>
+
+        <!-- Education -->
+        <h2>Education</h2>
+        <div class="timeline">
+            <div class="timeline-item card">
+                <strong>B.E (ISE)</strong> – K.N.S Institute of Technology (2025) | CGPA: 9.1
+            </div>
+            <div class="timeline-item card">
+                <strong>PUC (PCMC)</strong> – Goodwill PU College (2021) | 99%
+            </div>
+            <div class="timeline-item card">
+                <strong>SSLC</strong> – St. Flowers High School (2019) | 94%
+            </div>
+        </div>
+
+        <!-- Skills -->
+        <h2>Technical Skills</h2>
+        <div class="card">
+            <ul>
+                <li><strong>OS & Scripting:</strong> Linux (Server Setup), Shell Scripting (Automation)</li>
+                <li><strong>Java:</strong> OOP Concepts, Access Modifiers, Constructors</li>
+                <li><strong>Cloud:</strong> AWS (EC2, S3, IAM), IBM Cloud, CI/CD</li>
+                <li><strong>Database:</strong> MySQL (DDL, DML, DQL, Joins)</li>
+                <li><strong>Testing:</strong> Manual & Automation (Selenium), STLC, SDLC</li>
+            </ul>
+        </div>
+
+        <!-- Work Experience -->
+        <h2>Work Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item card">
+                <strong>Intern – Teamware Solution</strong> (Jul 2025 – Sep 2025)<br>
+                Linux automation, MySQL database design, Docker + AWS EC2 deployments.
+            </div>
+            <div class="timeline-item card">
+                <strong>Beta Tester – Rooman Technologies</strong> (Jan 2025 – Mar 2025)<br>
+                Tested LMS modules, reported bugs, verified functionality.
+            </div>
+            <div class="timeline-item card">
+                <strong>Web Development Intern – KodNest</strong> (Sep 2024 – Nov 2024)<br>
+                Built a static website using HTML, CSS, JavaScript.
+            </div>
+            <div class="timeline-item card">
+                <strong>Beta Tester – ProInterns</strong> (Apr 2022 – Sep 2022)<br>
+                Validated website features, provided UI/UX feedback.
+            </div>
+        </div>
+
+        <!-- Projects -->
+        <h2>Projects</h2>
+        <div class="card">
+            <ul>
+                <li><strong>AutoDeploy:</strong> Automated CI/CD deployment on AWS EC2 using GitHub Actions.</li>
+                <li><strong>Dockerized Login Application:</strong> Responsive login app deployed using Docker.</li>
+                <li><strong>Airlines Ticket Booking:</strong> CRUD-based booking system with admin features.</li>
+                <li><strong>Job Search Automation:</strong> Selenium + Java automation for Naukri job search.</li>
+                <li><strong>Portfolio Website:</strong> Designed and deployed personal portfolio using HTML, CSS.</li>
+            </ul>
+        </div>
+
+        <!-- Certifications & Achievements -->
+        <h2>Certifications & Achievements</h2>
+        <div class="card">
+            <ul>
+                <li>Cloud Application Developer – NSDC Rooman</li>
+                <li>Introduction to Cloud – IBM</li>
+                <li>Software Testing – QSpiders (Manual + Selenium)</li>
+                <li>2nd Prize – Paper Presentation (Cognitech-23)</li>
+                <li>1st Prize – Debugging Competition (Tech Takshak 2024)</li>
+                <li>Hackathon Coordinator – Tech Takshak 2024</li>
+                <li>Volunteered – Cancer Awareness Campaign (Suriya Foundation)</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>
